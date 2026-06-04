@@ -1,0 +1,98 @@
+export type Drink = {
+  name: string;
+  image: string;
+  description: string;
+  ingredients: string[];
+  taste: string;
+  serving: string;
+  sizes: string[];
+  benefits?: string[];
+};
+
+export type Collection = {
+  id: string;
+  title: string;
+  subtitle: string;
+  theme: string;
+  items: Drink[];
+};
+
+const sizes = ['Regular', 'Large', 'Premium'];
+
+export const collections: Collection[] = [
+  {
+    id: 'shakes',
+    title: 'Shakes Collection',
+    subtitle: 'Milk splash reveal · floating cream',
+    theme: 'from-amber-900/30',
+    items: [
+      { name: 'Chocolate Shake', image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699', description: 'Rich Belgian chocolate blended with creamy milk.', ingredients: ['Cocoa', 'Milk', 'Ice cream', 'Chocolate syrup'], taste: 'Rich & decadent', serving: 'Chilled tall glass with whipped cream', sizes },
+      { name: 'Oreo Shake', image: 'https://images.unsplash.com/photo-1553787499-6f913324e8b9', description: 'Crushed Oreo cookies in a velvety shake.', ingredients: ['Oreo', 'Milk', 'Vanilla ice cream'], taste: 'Cookies & cream', serving: 'Topped with cookie crumble', sizes },
+      { name: 'KitKat Shake', image: 'https://images.unsplash.com/photo-1579954115563-e72bf1381629', description: 'Crunchy KitKat wafers blended smooth.', ingredients: ['KitKat', 'Milk', 'Ice cream'], taste: 'Crunchy chocolate', serving: 'Garnished with KitKat fingers', sizes },
+      { name: 'Mango Shake', image: 'https://images.unsplash.com/photo-1623065422902-30a2d299bbe4', description: 'Alphonso mango pulp blended fresh.', ingredients: ['Mango pulp', 'Milk', 'Sugar'], taste: 'Sweet & fruity', serving: 'Chilled with mango bits', sizes },
+      { name: 'Strawberry Shake', image: 'https://images.unsplash.com/photo-1577805947697-89e18249d767', description: 'Fresh strawberries whipped into cream.', ingredients: ['Strawberry', 'Milk', 'Ice cream'], taste: 'Fresh & tangy', serving: 'Topped with strawberry slice', sizes },
+      { name: 'Vanilla Shake', image: 'https://images.unsplash.com/photo-1464306076886-da185f6a9d05', description: 'Classic Madagascar vanilla bean shake.', ingredients: ['Vanilla', 'Milk', 'Ice cream'], taste: 'Smooth & classic', serving: 'Simple and elegant', sizes },
+      { name: 'Butterscotch Shake', image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93', description: 'Caramelised butterscotch indulgence.', ingredients: ['Butterscotch', 'Milk', 'Praline'], taste: 'Caramel sweet', serving: 'With praline crunch', sizes },
+      { name: 'Dry Fruit Shake', image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307', description: 'Loaded with almonds, cashews and pistachios.', ingredients: ['Almonds', 'Cashew', 'Pistachio', 'Milk'], taste: 'Nutty & rich', serving: 'Garnished with chopped nuts', sizes },
+    ],
+  },
+  {
+    id: 'cold-coffee',
+    title: 'Cold Coffee Collection',
+    subtitle: 'Coffee swirl · floating beans · smoke',
+    theme: 'from-stone-800/40',
+    items: [
+      { name: 'Classic Cold Coffee', image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c', description: 'Smooth brewed coffee served ice cold.', ingredients: ['Coffee', 'Milk', 'Sugar', 'Ice'], taste: 'Bold & smooth', serving: 'Tall glass with foam', sizes },
+      { name: 'Chocolate Cold Coffee', image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085', description: 'Coffee fused with dark chocolate.', ingredients: ['Coffee', 'Chocolate', 'Milk'], taste: 'Mocha rich', serving: 'With chocolate drizzle', sizes },
+      { name: 'Caramel Cold Coffee', image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735', description: 'Buttery caramel meets cold brew.', ingredients: ['Coffee', 'Caramel', 'Milk'], taste: 'Sweet caramel', serving: 'Caramel swirl glass', sizes },
+      { name: 'Ice Cream Cold Coffee', image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e', description: 'Topped with a scoop of vanilla ice cream.', ingredients: ['Coffee', 'Ice cream', 'Milk'], taste: 'Creamy & cold', serving: 'Affogato style', sizes },
+      { name: 'Premium Cold Coffee', image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93', description: 'Our signature triple-shot indulgence.', ingredients: ['Espresso', 'Cream', 'Hazelnut'], taste: 'Intense & luxe', serving: 'Crystal glass presentation', sizes },
+    ],
+  },
+  {
+    id: 'mojitos',
+    title: 'Mojito Collection',
+    subtitle: 'Soda bubbles · floating lime · ice crystals',
+    theme: 'from-emerald-900/30',
+    items: [
+      { name: 'Mint Mojito', image: 'https://images.unsplash.com/photo-1551024709-8f23befc6cf7', description: 'Fresh mint muddled with lime and soda.', ingredients: ['Mint', 'Lime', 'Soda', 'Sugar'], taste: 'Cool & refreshing', serving: 'Highball with crushed ice', sizes },
+      { name: 'Blue Lagoon Mojito', image: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b', description: 'Electric blue citrus cooler.', ingredients: ['Blue curacao syrup', 'Lime', 'Soda'], taste: 'Citrus tropical', serving: 'Glowing blue glass', sizes },
+      { name: 'Green Apple Mojito', image: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187', description: 'Crisp green apple with mint.', ingredients: ['Green apple', 'Mint', 'Soda'], taste: 'Sweet & crisp', serving: 'With apple slices', sizes },
+      { name: 'Watermelon Mojito', image: 'https://images.unsplash.com/photo-1560963689-79ab174aeda3', description: 'Juicy watermelon summer cooler.', ingredients: ['Watermelon', 'Mint', 'Lime'], taste: 'Juicy & light', serving: 'Watermelon garnish', sizes },
+      { name: 'Strawberry Mojito', image: 'https://images.unsplash.com/photo-1461823385004-d7660947a7c0', description: 'Berry-forward minty refresher.', ingredients: ['Strawberry', 'Mint', 'Soda'], taste: 'Berry fresh', serving: 'With muddled berries', sizes },
+    ],
+  },
+  {
+    id: 'lassi',
+    title: 'Lassi Collection',
+    subtitle: 'Creamy transitions · floating saffron',
+    theme: 'from-yellow-900/30',
+    items: [
+      { name: 'Sweet Lassi', image: 'https://images.unsplash.com/photo-1626200419199-391ae4be7a41', description: 'Traditional sweet yogurt blend.', ingredients: ['Yogurt', 'Sugar', 'Cardamom'], taste: 'Sweet & creamy', serving: 'Earthen cup with cream', sizes, benefits: ['Cooling', 'Aids digestion', 'Probiotic rich'] },
+      { name: 'Mango Lassi', image: 'https://images.unsplash.com/photo-1553530666-ba11a90bb918', description: 'Mango pulp churned with yogurt.', ingredients: ['Mango', 'Yogurt', 'Sugar'], taste: 'Fruity & thick', serving: 'Topped with saffron', sizes, benefits: ['Rich in vitamin C', 'Cooling'] },
+      { name: 'Strawberry Lassi', image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699', description: 'Berry twist on the classic lassi.', ingredients: ['Strawberry', 'Yogurt'], taste: 'Tangy sweet', serving: 'With berry coulis', sizes, benefits: ['Antioxidants', 'Cooling'] },
+      { name: 'Dry Fruit Lassi', image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307', description: 'Loaded with premium nuts and saffron.', ingredients: ['Yogurt', 'Almonds', 'Pistachio', 'Saffron'], taste: 'Rich & nutty', serving: 'Garnished with nuts', sizes, benefits: ['Energy boost', 'Cooling'] },
+    ],
+  },
+  {
+    id: 'buttermilk',
+    title: 'Buttermilk Collection',
+    subtitle: 'Cream swirl · traditional cooling theme',
+    theme: 'from-slate-700/30',
+    items: [
+      { name: 'Classic Buttermilk', image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307', description: 'Light, spiced traditional chaas.', ingredients: ['Yogurt', 'Water', 'Cumin', 'Salt'], taste: 'Light & savoury', serving: 'Chilled tall glass', sizes, benefits: ['Hydrating', 'Aids digestion', 'Cooling'] },
+      { name: 'Masala Buttermilk', image: 'https://images.unsplash.com/photo-1553530666-ba11a90bb918', description: 'Spiced with mint, ginger and curry leaf.', ingredients: ['Yogurt', 'Mint', 'Ginger', 'Curry leaf', 'Spices'], taste: 'Spiced & zesty', serving: 'With coriander garnish', sizes, benefits: ['Digestive', 'Electrolyte boost', 'Cooling'] },
+    ],
+  },
+];
+
+export const navLinks = [
+  { label: 'Home', href: '#home' },
+  { label: 'Shakes', href: '#shakes' },
+  { label: 'Cold Coffee', href: '#cold-coffee' },
+  { label: 'Mojitos', href: '#mojitos' },
+  { label: 'Lassi', href: '#lassi' },
+  { label: 'Buttermilk', href: '#buttermilk' },
+  { label: 'About', href: '#about' },
+  { label: 'Contact', href: '#contact' },
+];
