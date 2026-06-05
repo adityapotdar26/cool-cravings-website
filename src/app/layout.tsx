@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import SmoothScroll from '@/components/providers/SmoothScroll';
 import LoadingScreen from '@/components/providers/LoadingScreen';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: 'Cool Cravings — Shakes & Drinks',
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <LoadingScreen />
         <SmoothScroll>{children}</SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
