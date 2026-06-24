@@ -196,7 +196,7 @@ export default function AdminPage() {
       { key: 'online_payment_enabled', value: settings.online_payment_enabled },
     ];
     if (newPw) updates.push({ key: 'admin_password', value: newPw });
-    for (const u of updates) await supabase.from('settings').upsert({ key: u.key, value: u.value });
+    for (const u of updates) await supabase.from('settings').update({ value: u.value }).eq('key', u.key);
     showToast('✅ Settings saved!'); if (newPw) setNewPw('');
   };
 
