@@ -103,8 +103,7 @@ export default function CartDrawer() {
       .select('*')
       .eq('table_number', tNum)
       .eq('status', 'active')
-      .single();
-
+      .maybeSingle();
     if (existing) return existing.id; // Reuse existing session
 
     // Get table id
